@@ -14,7 +14,7 @@ BlocVisualConsistencyExperiment >> property: receiver arguments: arguments resul
 { #category : 'running' }
 BlocVisualConsistencyExperiment >> runCampaign [
 
-	| runner result |
+	| runner |
 	
 	runner := self getRunner.
 	runner guidedByScore.
