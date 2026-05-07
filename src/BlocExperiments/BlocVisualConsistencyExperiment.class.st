@@ -18,7 +18,6 @@ BlocVisualConsistencyExperiment >> runCampaign [
 	
 	runner := self getRunner.
 	runner guidedByScore.
-	
 	^ runner run
 	
 ]

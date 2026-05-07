@@ -14,6 +14,6 @@ BaselineOfBlocExperiments >> baseline: spec [
 		spec baseline: 'CairoPlugin' with: [ spec repository: 'github://tesonep/CairoPlugin/src' ].
 		spec baseline: 'Bloc' with: [ spec repository: 'github://pharo-graphics/Bloc:improve-rendering/src' ].
 		
-		spec package: 'BlocExperiments' with: [ spec requires: #( 'Ume' 'Bloc' 'CairoPlugin' ) ].
+		spec package: 'BlocExperiments' with: [ spec requires: #( 'Ume' 'CairoPlugin' 'Bloc' ) ].
 	]
 ]
