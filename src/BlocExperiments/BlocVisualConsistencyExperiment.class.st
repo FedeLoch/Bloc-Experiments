@@ -26,5 +26,8 @@ BlocVisualConsistencyExperiment >> runCampaign [
 { #category : 'running' }
 BlocVisualConsistencyExperiment >> score: receiver arguments: arguments result: result [
 
-	^ ((UmeBlocRender renderComparison: arguments first) second * 100) exp "] on: Error do: [ :e | 1 halt. 0 ]"
+	|comparison|
+	comparison := UmeBlocRender renderComparison: arguments first.
+
+	^ comparison second "] on: Error do: [ :e | 1 halt. 0 ]"
 ]

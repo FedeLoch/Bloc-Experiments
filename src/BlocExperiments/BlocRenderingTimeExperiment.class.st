@@ -17,7 +17,7 @@ BlocRenderingTimeExperiment >> runCampaign [
 	| runner |
 	
 	runner := self getRunner.
-	runner guidedByAllocatedMemory.
+	runner guidedByScore.
 	
 	^ runner run
 	
@@ -26,6 +26,13 @@ BlocRenderingTimeExperiment >> runCampaign [
 { #category : 'running' }
 BlocRenderingTimeExperiment >> score: receiver arguments: arguments result: result [
 
-	1 halt.
-	"TODO: the difference between both renderers render time"
+	| element times |
+		element := arguments first.
+		times := { BARenderer new. CPRendererWithPlugin new }
+		collect: [ :renderer |	
+				element removeFromParent.
+				[ UmeBlocRender render: element with: renderer ] timeToRun asMilliSeconds
+		].
+
+	^ (times first - times second) abs
 ]

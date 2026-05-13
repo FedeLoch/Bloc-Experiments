@@ -17,7 +17,7 @@ BlocMemoryUsageExperiment >> runCampaign [
 	| runner |
 	
 	runner := self getRunner.
-	runner guidedByScore.
+	runner guidedByAllocatedMemory.
 	^ runner run
 	
 ]
