@@ -29,7 +29,7 @@ BlocRenderingTimeExperiment >> score: receiver arguments: arguments result: resu
 	| element times |
 		element := arguments first.
 		times := { BARenderer new. CPRendererWithPlugin new }
-		collect: [ :renderer |	
+		collect: [ :renderer |
 				element removeFromParent.
 				[ UmeBlocRender render: element with: renderer ] timeToRun asMilliSeconds
 		].

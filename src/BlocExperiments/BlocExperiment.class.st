@@ -18,7 +18,7 @@ BlocExperiment >> argumentGenerators [
 { #category : 'running' }
 BlocExperiment >> campaignDuration [
 
-	^ 1 minutes
+	^ 10 minutes
 ]
 
 { #category : 'running' }

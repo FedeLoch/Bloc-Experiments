@@ -6,6 +6,13 @@ Class {
 }
 
 { #category : 'running' }
+BlocMemoryUsageExperiment >> campaignDuration [
+
+	"TODO: delete me"
+	^ 10 minutes 
+]
+
+{ #category : 'running' }
 BlocMemoryUsageExperiment >> property: receiver arguments: arguments result: result [
 
 	^ result class = AeCairoImageSurface
